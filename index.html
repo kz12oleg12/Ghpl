@@ -8,7 +8,7 @@
     <title>Document</title>
     <style>
         body {
-            background: aliceblue;
+            background: #eee;
         }
 
         #home {
@@ -23,10 +23,110 @@
         }
 
         #home h1 {
-            color: indigo;
+            color: gray;
             font-family: sans-serif;
             font-weight: 300;
+            font-size: 25px;
+            padding: 0 15px;
+        }
+
+        #home .cont {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.363);
+            background: white;
+            /* padding: 0 15px; */
+            overflow: hidden;
+            width: 450px;
+            height: auto;
+            transition: ease, 0.5s;
+        }
+
+        #home .cont:hover {
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.267);
+        }
+
+        #home h1.gl {
+            text-align: center;
+            font-weight: 900;
+            color: white;
             text-transform: uppercase;
+            letter-spacing: 35px;
+            font-size: 80px;
+            margin: 0 -40px 0;
+            line-height: 0.6;
+            background: black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.363);
+            position: relative;
+            z-index: 10;
+        }
+
+        #home .line {
+            width: 100%;
+            height: 1.5px;
+            background: #eee
+        }
+
+        #home h1.gl span {
+            margin-left: 60px;
+            letter-spacing: 20px;
+        }
+
+        #home h1 {
+            /* text-align: right; */
+            text-align: center;
+        }
+
+        #home button {
+            border: none;
+            background: black;
+
+            /* margin: 15px 5px; */
+            color: white;
+            font-size: 25px;
+            text-transform: uppercase;
+            font-weight: 900;
+            cursor: pointer;
+            transition: ease, 0.5s;
+        }
+
+        #home button.l {
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+            padding: 0 15px;
+            /* border-right: 1px solid white; */
+            width: 30%;
+        }
+
+        #home button.r {
+            width: 100%;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+        #home .btn-cont:hover button.l {
+            transform: translateX(-30px);
+        }
+
+        #home .btn-cont:hover button.r {
+            transform: translateX(60px);
+        }
+
+        #home button:hover {
+            transform: scale(1.05)
+        }
+
+        #home .btn-cont {
+            display: flex;
+            padding: 15px;
+        }
+        #home .home{
+            overflow: hidden;
+            
+        }
+        #home .home img{
+            transition: ease, 2s;
+        }
+        #home .cont:hover .home img {
+            transform: scale(1.2);
         }
     </style>
 </head>
@@ -34,11 +134,23 @@
 <body>
     <div id="home">
         <div class="cont">
-            <h1>Helo World!</h1>
-            <h1>Vlad + Oleg = Super program </h1>
-            <h1>Sosison</h1>
-            <h1>view</h1>
-            <h1>sddsadass</h1>
+            <h1 class="gl">Hello
+                <span>World</span>
+            </h1>
+            <div class="home">
+                <img src="home.jpg" alt="" width="100%">
+            </div>
+            <div class="line"></div>
+            <h1 class="r">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. </h1>
+            <div class="line"></div>
+            <h1>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. </h1>
+            <div class="line"></div>
+            <h1 class="r">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. </h1>
+            <div class="line"></div>
+            <div class="btn-cont">
+                <button class="l">L </button>
+                <button class="r">Lorem Ipsum</button>
+            </div>
         </div>
     </div>
 </body>
